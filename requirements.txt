@@ -1,0 +1,11 @@
+django
+mysqlclient
+django-extensions
+djangorestframework
+markdown 
+django-filter
+django-crispy-forms
+Werkzeug
+django-debug-toolbar 
+dj-database-url
+gunicorn
