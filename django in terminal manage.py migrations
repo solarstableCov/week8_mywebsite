@@ -1,0 +1,28 @@
+resume@ubuntu:~/week8_mywebsite/mysite$ cd ..
+resume@ubuntu:~/week8_mywebsite$ . ./house_venv/bin/activate
+(house_venv) resume@ubuntu:~/week8_mywebsite$ python3 manage.py makemigrations house
+python3: can't open file 'manage.py': [Errno 2] No such file or directory
+(house_venv) resume@ubuntu:~/week8_mywebsite$ cd mysite
+(house_venv) resume@ubuntu:~/week8_mywebsite/mysite$ python3 manage.py makemigrations house
+Migrations for 'house':
+  house/migrations/0001_initial.py
+    - Create model Activities
+    - Create model Detail
+(house_venv) resume@ubuntu:~/week8_mywebsite/mysite$ python3 manage.py sqlmigrate house 0001
+BEGIN;
+--
+-- Create model Activities
+--
+CREATE TABLE "house_activities" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "activity_text" varchar(200) NOT NULL, "pub_date" datetime NOT NULL);
+--
+-- Create model Detail
+--
+CREATE TABLE "house_detail" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "detail_text" varchar(1000) NOT NULL);
+COMMIT;
+(house_venv) resume@ubuntu:~/week8_mywebsite/mysite$ python3 manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, house, sessions
+Running migrations:
+  Applying house.0001_initial... OK
+(house_venv) resume@ubuntu:~/week8_mywebsite/mysite$ 
+
