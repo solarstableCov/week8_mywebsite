@@ -7,7 +7,7 @@ class Activities(models.Model):
     #activity_text = "reading"
     def __str__(self):
         return self.activity_text
-class Details(models.Model):
+#class Details(models.Model):
     detail_text = models.TextField(max_length=1000,null=True)
     #detail_text = "You can pick up a book from your bookshelf or look up an ebook online" 
     def __str__(self):
@@ -17,7 +17,7 @@ class Details(models.Model):
     def __str__(self):
         return self.category_text
     pub_date = models.DateTimeField('date published',null=True)
-    #pub_date = 512023
+    #pub_date = 05012023
     def was_published_recently(self):
         return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
     class Meta:
