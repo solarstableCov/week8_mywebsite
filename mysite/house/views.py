@@ -5,5 +5,10 @@ from django.template import loader
 #def index(request):
     #return HttpResponse("Hello world!")
 def house(request):
-  template = loader.get_template('myfirst.html')
-  return HttpResponse(template.render())
+  #template = loader.get_template('myfirst.html')
+  #return HttpResponse(template.render())
+    context = {}
+    activities = Activities.objects.all()
+    context['activities'] = activities
+    
+    return render(request, "house.html", context)

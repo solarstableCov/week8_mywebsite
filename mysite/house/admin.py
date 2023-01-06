@@ -1,9 +1,10 @@
 from django.contrib import admin
-
-# Register your models here.
 from .models import Activities
-admin.site.register(Activities)
+from .models import Details
+# Register your models here.
 
+admin.site.register(Activities)
+admin.site.register(Details)
 
 
 
