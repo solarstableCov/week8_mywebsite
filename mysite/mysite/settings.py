@@ -57,7 +57,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['/home/resume/week8_mywebsite/mysite/house/templates/house'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
