@@ -1,10 +1,10 @@
 from django.db import models
 # Create your models here.
 class Activities(models.Model):
-    activity_text = models.CharField(max_length=200,null=True)
-    detail_text = models.TextField(max_length=1000,null=True)
-    category_text = models.CharField(max_length=300,null=True)
-    pub_date = models.DateTimeField('date published',null=True)
+    activity_text = models.CharField(max_length=200)
+    detail_text = models.TextField(max_length=1000)
+    category_text = models.CharField(max_length=300)
+    pub_date = models.DateTimeField('date published')
     #activity_text = "reading"
     def __str__(self):
         return self.activity_text
