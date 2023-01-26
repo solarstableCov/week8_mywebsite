@@ -11,9 +11,9 @@
 <head>
 
 <body>
-    <h1>Hello World!</h1>
+    <h1>Activities to do at home</h1>
     <p>Welcome to my first Django project!</p>
-    <p>These are the activities</p>
+    <p>These are some activities to do at home</p>
 {% if activities %}
     <ul>
     {% for activity in activities %}
@@ -21,7 +21,7 @@
     {% endfor %}
     </ul>
 {% else %}
-    <p>No houses are available.</p>
+    <p>This is not a valid activity.</p>
 {% endif %}
 </body>
 </html>
